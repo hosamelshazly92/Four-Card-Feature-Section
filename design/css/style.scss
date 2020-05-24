@@ -1,11 +1,107 @@
-$mainColor: #ccc;
+//primary colors
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
 
-.class1 {
-    color: $mainColor;
-    font-weight: 100;
+//neutral colors
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+//font
+$mainFont: 'Poppins',
+sans-serif;
+$fontSize: 14px;
+$fontWeight: 100;
+
+//padding 10%
+$padding: 10%;
+
+* {
+    padding: 0px;
+    margin: 0px;
 }
 
-.class2 {
-    background-color: $mainColor;
-    border: 1px solid $mainColor;
+body {
+    font-family: $mainFont;
+    font-size: $fontSize;
+    background-color: $Very-Light-Gray;
+
+    .container {
+        padding: $padding / 2;
+
+        .header {
+            padding-top: $padding;
+            padding-bottom: $padding;
+            width: 60%;
+            margin: auto;
+            text-align: center;
+
+            p:first-child {
+                font-size: 1.8em;
+                font-weight: $fontWeight * 1;
+                color: $Grayish-Blue;
+            }
+
+            p:nth-child(2) {
+                font-size: 1.8em;
+                font-weight: $fontWeight * 6;
+                color: $Very-Dark-Blue;
+            }
+
+            p:last-child {
+                font-size: 1.2em;
+                font-weight: $fontWeight * 4;
+                padding-top: 1em;
+                color: $Grayish-Blue;
+            }
+        }
+
+        .card {
+            padding: $padding / 2;
+            width: 50%;
+            margin: $padding / 2 auto;
+            background-color: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 4px 4px 12px 0px $Grayish-Blue;
+            overflow: auto;
+
+            p:first-child {
+                font-size: 1.2em;
+                font-weight: $fontWeight * 6;
+                color: $Very-Dark-Blue;
+            }
+
+            p:nth-child(2) {
+                font-size: 1em;
+                font-weight: $fontWeight * 4;
+                color: $Grayish-Blue;
+            }
+
+            img {
+                padding-top: $padding * 1.5;
+                float: right;
+            }
+        }
+
+        .cyan {
+            border-top: 5px solid $Cyan;
+        }
+
+        .red {
+            border-top: 5px solid $Red;
+        }
+
+        .orange {
+            border-top: 5px solid $Orange;
+        }
+
+        .blue {
+            border-top: 5px solid $Blue;
+        }
+    }
 }
