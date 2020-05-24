@@ -1,0 +1,11 @@
+$mainColor: #ccc;
+
+.class1 {
+    color: $mainColor;
+    font-weight: 100;
+}
+
+.class2 {
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+}
