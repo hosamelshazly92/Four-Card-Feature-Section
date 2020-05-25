@@ -9,6 +9,8 @@ $Very-Dark-Blue: hsl(234, 12%, 34%);
 $Grayish-Blue: hsl(229, 6%, 66%);
 $Very-Light-Gray: hsl(0, 0%, 98%);
 
+$shadow: #e6e6e6;
+
 //font
 $mainFont: 'Poppins',
 sans-serif;
@@ -30,7 +32,7 @@ $gridNum: 3;
 
 //margin-top
 .mt {
-    margin-top: 100px;
+    margin-top: 125px;
 }
 
 * {
@@ -44,21 +46,21 @@ body {
     background-color: $Very-Light-Gray;
 
     .container {
-        padding: $padding / 2;
+        padding: $padding * 1.5;
 
         .header {
-            width: 55%;
-            margin: auto;
+            width: 50%;
+            margin: 0 auto $padding / 2 auto;
             text-align: center;
 
             p:first-child {
-                font-size: 1.6em;
+                font-size: 2.2em;
                 font-weight: $fontWeight * 1;
                 color: $Grayish-Blue;
             }
 
             p:nth-child(2) {
-                font-size: 1.6em;
+                font-size: 2.2em;
                 font-weight: $fontWeight * 6;
                 color: $Very-Dark-Blue;
             }
@@ -80,11 +82,12 @@ body {
             border-top-right-radius: 10px;
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 4px 4px 12px 0px $Grayish-Blue;
+            box-shadow: 4px 4px 24px 0px $shadow,
+                1px 2px 12px 0px $shadow;
             overflow: auto;
 
             p:first-child {
-                font-size: 1.2em;
+                font-size: 1.4em;
                 font-weight: $fontWeight * 6;
                 color: $Very-Dark-Blue;
             }
@@ -128,21 +131,50 @@ body {
     }
 }
 
-//media query
-@media screen and (max-width: 790px) {
+//media query small screen
+@media screen and (max-width: 790px) and (min-width: 425px) {
+    .container {
+        padding: $padding / 4;
+    }
+
     .header {
-        padding: $padding * 2 0;
+        min-width: 70%;
+        padding: $padding 0;
     }
 
     .col-1,
     .col-2,
     .col-3 {
-        width: 55%;
+        width: 75%;
         float: none;
         margin: 0 auto;
     }
 
     img {
-        padding-top: $padding * 4;
+        padding-top: $padding;
+    }
+}
+
+//media query for mobile screen
+@media screen and (max-width: 425px) {
+    .container {
+        padding: $padding / 4;
+    }
+
+    .header {
+        min-width: 70%;
+        padding: $padding 0;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 75%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    img {
+        padding-top: $padding;
     }
 }
