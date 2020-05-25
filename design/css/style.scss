@@ -16,7 +16,22 @@ $fontSize: 14px;
 $fontWeight: 100;
 
 //padding 10%
-$padding: 10%;
+$padding: 5%;
+
+//grid system
+$gridNum: 3;
+
+@for $i from 1 through $gridNum {
+    .col-#{$i} {
+        width: (100% / $gridNum);
+        float: left;
+    }
+}
+
+//margin-top
+.mt {
+    margin-top: 100px;
+}
 
 * {
     padding: 0px;
@@ -32,36 +47,34 @@ body {
         padding: $padding / 2;
 
         .header {
-            padding-top: $padding;
-            padding-bottom: $padding;
-            width: 60%;
+            width: 55%;
             margin: auto;
             text-align: center;
 
             p:first-child {
-                font-size: 1.8em;
+                font-size: 1.6em;
                 font-weight: $fontWeight * 1;
                 color: $Grayish-Blue;
             }
 
             p:nth-child(2) {
-                font-size: 1.8em;
+                font-size: 1.6em;
                 font-weight: $fontWeight * 6;
                 color: $Very-Dark-Blue;
             }
 
             p:last-child {
                 font-size: 1.2em;
-                font-weight: $fontWeight * 4;
-                padding-top: 1em;
+                font-weight: $fontWeight * 2;
+                padding-top: 0.5em;
                 color: $Grayish-Blue;
             }
         }
 
         .card {
-            padding: $padding / 2;
-            width: 50%;
-            margin: $padding / 2 auto;
+            height: 200px;
+            padding: $padding;
+            margin: $padding;
             background-color: #fff;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -78,14 +91,23 @@ body {
 
             p:nth-child(2) {
                 font-size: 1em;
-                font-weight: $fontWeight * 4;
+                font-weight: $fontWeight * 2;
                 color: $Grayish-Blue;
+                line-height: 2em;
             }
 
             img {
-                padding-top: $padding * 1.5;
                 float: right;
+                padding-top: $padding * 2;
             }
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
         }
 
         .cyan {
@@ -103,5 +125,24 @@ body {
         .blue {
             border-top: 5px solid $Blue;
         }
+    }
+}
+
+//media query
+@media screen and (max-width: 790px) {
+    .header {
+        padding: $padding * 2 0;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 55%;
+        float: none;
+        margin: 0 auto;
+    }
+
+    img {
+        padding-top: $padding * 4;
     }
 }
