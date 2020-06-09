@@ -45,10 +45,10 @@ body {
     background-color: $Very-Light-Gray;
 
     .container {
-        padding: $padding $padding * 1.5;
+        padding: 100px 50px;
 
         .header {
-            width: 50%;
+            width: 70%;
             margin: 0 auto $padding / 2 auto;
             text-align: center;
 
@@ -59,7 +59,7 @@ body {
             }
 
             p:nth-child(2) {
-                font-size: 2.2em;
+                font-size: 1.4em;
                 font-weight: $fontWeight * 6;
                 color: $Very-Dark-Blue;
             }
@@ -71,7 +71,7 @@ body {
                 color: $Very-Dark-Blue;
             }
         }
- 
+
         .card {
             height: 150px;
             padding: $padding;
@@ -135,49 +135,46 @@ body {
 }
 
 //media query small screen
-@media screen and (max-width: 790px) and (min-width: 425px) {
-    .container {
-        padding: $padding / 4;
-    }
+@media (max-width: 670px) {
+    body {
+        .container {
+            padding: 100px 50px;
 
-    .header {
-        min-width: 70%;
-        padding: $padding 0;
-    }
+            .header {
+                width: 70%;
 
-    .col-1,
-    .col-2,
-    .col-3 {
-        width: 75%;
-        float: none;
-        margin: 0 auto;
-    }
+                p:first-child {
+                    font-size: 1.2em;
+                }
 
-    img {
-        padding-top: $padding;
-    }
-}
+                p:nth-child(2) {
+                    font-size: 1em;
+                }
 
-//media query for mobile screen
-@media screen and (max-width: 425px) {
-    .container {
-        padding: $padding / 4;
-    }
+                p:last-child {
+                    font-size: 0.8em;
+                }
+            }
 
-    .header {
-        min-width: 70%;
-        padding: $padding 0;
-    }
+            .cyan {
+                margin-right: 10px;
+            }
 
-    .col-1,
-    .col-2,
-    .col-3 {
-        width: 75%;
-        float: none;
-        margin: 0 auto;
-    }
+            .blue {
+                margin-left: 10px;
+            }
 
-    img {
-        padding-top: $padding;
+            .col-1,
+            .col-2,
+            .col-3 {
+                width: 75%;
+                float: none;
+                margin: 0 auto;
+
+                img {
+                    padding-top: 5px;
+                }
+            }
+        }
     }
 }
