@@ -8,8 +8,7 @@ $Blue: hsl(212, 86%, 64%);
 $Very-Dark-Blue: hsl(234, 12%, 34%);
 $Grayish-Blue: hsl(229, 6%, 66%);
 $Very-Light-Gray: hsl(0, 0%, 98%);
-
-$shadow: #e6e6e6;
+$light-grey: #e6e6e6;
 
 //font
 $mainFont: 'Poppins',
@@ -17,7 +16,7 @@ sans-serif;
 $fontSize: 14px;
 $fontWeight: 100;
 
-//padding 10%
+//padding
 $padding: 5%;
 
 //grid system
@@ -46,7 +45,7 @@ body {
     background-color: $Very-Light-Gray;
 
     .container {
-        padding: $padding * 1.5;
+        padding: $padding $padding * 1.5;
 
         .header {
             width: 50%;
@@ -55,8 +54,8 @@ body {
 
             p:first-child {
                 font-size: 2.2em;
-                font-weight: $fontWeight * 1;
-                color: $Grayish-Blue;
+                font-weight: $fontWeight;
+                color: $Very-Dark-Blue;
             }
 
             p:nth-child(2) {
@@ -66,42 +65,44 @@ body {
             }
 
             p:last-child {
-                font-size: 1.2em;
+                font-size: 1em;
                 font-weight: $fontWeight * 2;
                 padding-top: 0.5em;
-                color: $Grayish-Blue;
+                color: $Very-Dark-Blue;
             }
         }
-
+ 
         .card {
-            height: 200px;
+            height: 150px;
             padding: $padding;
-            margin: $padding;
+            margin: 30px 10px;
             background-color: #fff;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: 4px 4px 24px 0px $shadow,
-                1px 2px 12px 0px $shadow;
-            overflow: auto;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            box-shadow: 4px 8px 24px 0px $light-grey,
+                1px 4px 8px 0px $light-grey;
+            overflow: hidden;
 
             p:first-child {
-                font-size: 1.4em;
+                font-size: 1em;
                 font-weight: $fontWeight * 6;
                 color: $Very-Dark-Blue;
+                margin-bottom: 10px;
             }
 
             p:nth-child(2) {
-                font-size: 1em;
+                font-size: 0.8em;
                 font-weight: $fontWeight * 2;
                 color: $Grayish-Blue;
-                line-height: 2em;
+                line-height: 1.4em;
             }
 
             img {
                 float: right;
-                padding-top: $padding * 2;
+                padding-top: 20px;
+                transform: scale(0.8);
             }
         }
 
@@ -114,19 +115,21 @@ body {
         }
 
         .cyan {
-            border-top: 5px solid $Cyan;
+            border-top: 3px solid $Cyan;
+            margin-right: 20px;
         }
 
         .red {
-            border-top: 5px solid $Red;
+            border-top: 3px solid $Red;
         }
 
         .orange {
-            border-top: 5px solid $Orange;
+            border-top: 3px solid $Orange;
         }
 
         .blue {
-            border-top: 5px solid $Blue;
+            border-top: 3px solid $Blue;
+            margin-left: 20px;
         }
     }
 }

@@ -28,7 +28,7 @@ body {
   background-color: #fafafa;
 }
 body .container {
-  padding: 7.5%;
+  padding: 5% 7.5%;
 }
 body .container .header {
   width: 50%;
@@ -38,7 +38,7 @@ body .container .header {
 body .container .header p:first-child {
   font-size: 2.2em;
   font-weight: 100;
-  color: #a3a5ae;
+  color: #4c4e61;
 }
 body .container .header p:nth-child(2) {
   font-size: 2.2em;
@@ -46,37 +46,39 @@ body .container .header p:nth-child(2) {
   color: #4c4e61;
 }
 body .container .header p:last-child {
-  font-size: 1.2em;
-  font-weight: 200;
-  padding-top: 0.5em;
-  color: #a3a5ae;
-}
-body .container .card {
-  height: 200px;
-  padding: 5%;
-  margin: 5%;
-  background-color: #fff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  box-shadow: 4px 4px 24px 0px #e6e6e6, 1px 2px 12px 0px #e6e6e6;
-  overflow: auto;
-}
-body .container .card p:first-child {
-  font-size: 1.4em;
-  font-weight: 600;
-  color: #4c4e61;
-}
-body .container .card p:nth-child(2) {
   font-size: 1em;
   font-weight: 200;
+  padding-top: 0.5em;
+  color: #4c4e61;
+}
+body .container .card {
+  height: 150px;
+  padding: 5%;
+  margin: 30px 10px;
+  background-color: #fff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 4px 8px 24px 0px #e6e6e6, 1px 4px 8px 0px #e6e6e6;
+  overflow: hidden;
+}
+body .container .card p:first-child {
+  font-size: 1em;
+  font-weight: 600;
+  color: #4c4e61;
+  margin-bottom: 10px;
+}
+body .container .card p:nth-child(2) {
+  font-size: 0.8em;
+  font-weight: 200;
   color: #a3a5ae;
-  line-height: 2em;
+  line-height: 1.4em;
 }
 body .container .card img {
   float: right;
-  padding-top: 10%;
+  padding-top: 20px;
+  transform: scale(0.8);
 }
 body .container .left {
   float: left;
@@ -85,16 +87,18 @@ body .container .right {
   float: right;
 }
 body .container .cyan {
-  border-top: 5px solid #45d3d3;
+  border-top: 3px solid #45d3d3;
+  margin-right: 20px;
 }
 body .container .red {
-  border-top: 5px solid #ea5353;
+  border-top: 3px solid #ea5353;
 }
 body .container .orange {
-  border-top: 5px solid #fcaf4a;
+  border-top: 3px solid #fcaf4a;
 }
 body .container .blue {
-  border-top: 5px solid #549ef2;
+  border-top: 3px solid #549ef2;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 790px) and (min-width: 425px) {
