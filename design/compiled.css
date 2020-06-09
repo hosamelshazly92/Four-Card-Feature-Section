@@ -48,7 +48,7 @@ body .container .header p:nth-child(2) {
 body .container .header p:last-child {
   font-size: 1em;
   font-weight: 200;
-  padding-top: 0.5em;
+  padding: 5% 10% 0% 10%;
   color: #4c4e61;
 }
 body .container .card {
